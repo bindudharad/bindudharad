@@ -1,0 +1,46 @@
+name: Generate GitHub Contribution Snake Animation
+
+on:
+  # Run automatically every 24 hours
+  schedule:
+    - cron: "0 0 * * *"
+  
+  # Allows manual triggering from the Actions tab
+  workflow_dispatch:
+  
+  # Run on every push to main/master branch
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Generates a snake game from a github user contributions graph, output a svg animation at <svg_out_path>
+      - name: Generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-contribution-grid-snake.svg
+            assets/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#38BDF8&color_dots=#050816,#0F172A,#1E293B,#2563EB,#7C3AED
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Push the generated SVGs to the output branch / repository
+      - name: Commit and Push Snake SVGs
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: 'chore: update contribution snake animation [skip ci]'
+          add: 'assets/github-contribution-grid-snake*.svg'

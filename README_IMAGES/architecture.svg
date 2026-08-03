@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=Inter:wght@500&amp;family=JetBrains+Mono&amp;display=swap');
+      .box-title { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; fill: #F8FAFC; }
+      .box-sub { font-family: 'Inter', sans-serif; font-size: 12px; fill: #94A3B8; }
+    </style>
+  </defs>
+
+  <rect width="900" height="400" rx="14" fill="#0F172A" stroke="url(#archGrad)" stroke-width="1.5" />
+
+  <text x="450" y="45" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">ATLAS AI &amp; AGENTIC PIPELINE ARCHITECTURE</text>
+
+  <!-- Box 1: Inputs -->
+  <g transform="translate(60, 100)">
+    <rect width="180" height="220" rx="10" fill="#1E293B" stroke="#2563EB" stroke-width="1.5" />
+    <text x="90" y="35" class="box-title" text-anchor="middle">Perception Layer</text>
+    <text x="90" y="75" class="box-sub" text-anchor="middle"> Screen Capture &amp; OCR</text>
+    <text x="90" y="115" class="box-sub" text-anchor="middle">👁️ Computer Vision</text>
+    <text x="90" y="155" class="box-sub" text-anchor="middle">🌐 DOM &amp; Browser State</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 245 210 L 315 210" stroke="#06B6D4" stroke-width="2.5" stroke-dasharray="4 4" />
+  <polygon points="315,205 325,210 315,215" fill="#06B6D4" />
+
+  <!-- Box 2: Agentic Engine -->
+  <g transform="translate(330, 80)">
+    <rect width="240" height="260" rx="12" fill="#1E293B" stroke="#7C3AED" stroke-width="2" />
+    <text x="120" y="40" class="box-title" text-anchor="middle" fill="#A78BFA">Agentic Decision Core</text>
+    <text x="120" y="85" class="box-sub" text-anchor="middle">🧠 Semantic Search (FAISS)</text>
+    <text x="120" y="125" class="box-sub" text-anchor="middle">⚡ LLM &amp; Vision Reasoning</text>
+    <text x="120" y="165" class="box-sub" text-anchor="middle">🔄 Workflow Planner</text>
+    <text x="120" y="205" class="box-sub" text-anchor="middle">🔒 Security &amp; JWT Auth</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 575 210 L 645 210" stroke="#7C3AED" stroke-width="2.5" stroke-dasharray="4 4" />
+  <polygon points="645,205 655,210 645,215" fill="#7C3AED" />
+
+  <!-- Box 3: Execution -->
+  <g transform="translate(660, 100)">
+    <rect width="180" height="220" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1.5" />
+    <text x="90" y="35" class="box-title" text-anchor="middle">Action Layer</text>
+    <text x="90" y="75" class="box-sub" text-anchor="middle">🤖 Human-like Automation</text>
+    <text x="90" y="115" class="box-sub" text-anchor="middle">⚡ FastAPI Microservices</text>
+    <text x="90" y="155" class="box-sub" text-anchor="middle">📦 SQLite / Postgres Sync</text>
+  </g>
+</svg>

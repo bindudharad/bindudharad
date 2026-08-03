@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ideaBg" cx="30%" cy="30%" r="90%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#050816" />
+    </radialGradient>
+    <linearGradient id="ideaBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <filter id="ideaGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono&amp;display=swap');
+      .p-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; fill: #FFFFFF; }
+      .p-subtitle { font-family: 'Inter', sans-serif; font-size: 13px; fill: #A78BFA; letter-spacing: 1px; }
+      .p-desc { font-family: 'Inter', sans-serif; font-size: 13px; fill: #94A3B8; }
+      .p-badge { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #E2E8F0; }
+    </style>
+  </defs>
+
+  <rect width="600" height="320" rx="14" fill="url(#ideaBg)" />
+  <rect x="1.5" y="1.5" width="597" height="317" rx="12.5" fill="none" stroke="url(#ideaBorder)" stroke-width="1.5" />
+
+  <g transform="translate(40, 45)">
+    <circle cx="30" cy="30" r="28" fill="#1E293B" stroke="#7C3AED" stroke-width="2" filter="url(#ideaGlow)" />
+    <!-- Magnifying Glass & Vector Node Icon -->
+    <circle cx="27" cy="27" r="10" fill="none" stroke="#38BDF8" stroke-width="2" />
+    <line x1="34" y1="34" x2="42" y2="42" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <g transform="translate(115, 55)">
+    <text x="0" y="0" class="p-title">AI Idea Authenticity Platform</text>
+    <text x="0" y="22" class="p-subtitle">SEMANTIC SEARCH &amp; VECTOR EMBEDDINGS</text>
+  </g>
+
+  <g transform="translate(40, 130)">
+    <text x="0" y="0" class="p-desc">🔎 Vector-based Similarity Search using Sentence Transformers</text>
+    <text x="0" y="24" class="p-desc">🚀 High-Performance FAISS Indexing for Instant Authenticity Checks</text>
+    <text x="0" y="48" class="p-desc">🔒 Secure JWT Auth, Next.js Frontend &amp; FastAPI Docker Microservices</text>
+  </g>
+
+  <g transform="translate(40, 245)">
+    <rect x="0" y="0" width="70" height="26" rx="6" fill="#1E293B" stroke="#7C3AED" stroke-opacity="0.5" />
+    <text x="12" y="17" class="p-badge" fill="#C084FC">FAISS</text>
+
+    <rect x="80" y="0" width="70" height="26" rx="6" fill="#1E293B" stroke="#2563EB" stroke-opacity="0.5" />
+    <text x="92" y="17" class="p-badge" fill="#60A5FA">Next.js</text>
+
+    <rect x="160" y="0" width="75" height="26" rx="6" fill="#1E293B" stroke="#06B6D4" stroke-opacity="0.5" />
+    <text x="170" y="17" class="p-badge" fill="#22D3EE">FastAPI</text>
+
+    <rect x="245" y="0" width="90" height="26" rx="6" fill="#1E293B" stroke="#334155" />
+    <text x="254" y="17" class="p-badge">PostgreSQL</text>
+
+    <rect x="345" y="0" width="70" height="26" rx="6" fill="#1E293B" stroke="#38BDF8" stroke-opacity="0.5" />
+    <text x="357" y="17" class="p-badge" fill="#38BDF8">Docker</text>
+  </g>
+</svg>
